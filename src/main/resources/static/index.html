@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+
+<nav class=" container navbar navbar-expand-sm navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class=" nav-item active">
+                <a class="nav-link" href="/">Issues <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+        <form id="search" class="form-inline my-2 my-lg-0">
+            <input id="search-input-name" name="name" class="form-control mr-sm-2" type="search" placeholder="Search"
+                   aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<div class="container my-sm-4">
+    <ul class="list-group" id="list"></ul>
+</div>
+
+<div class="container my-sm-4">
+    <table class="table" id="table">
+        <caption>List of issues</caption>
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Create date</th>
+            <th scope="col">votes</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+
+</div>
+
+<div class="container">
+    <form id="add-form" aria-label="Фома добавления " method="post" name="Фома добавления ">
+        <p><b>Add issue form</b></p>
+
+        <input id="add-form-input-name" placeholder="issue name" name="name">
+        <input id="add-form-input-description" placeholder="issue description" name="name">
+        <button class="btn btn-outline-success my-2 my-sm-0">Add</button>
+
+    </form>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
