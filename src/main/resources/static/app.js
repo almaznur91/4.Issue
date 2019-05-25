@@ -1,37 +1,9 @@
-// const message = " Hello world ";
-//
-// // примитив автоматически может заворачиваться в объект, если используется в контексте объекта
-// console.log(message.trim());
-//
-// function map(object, mapper) {
-//     return mapper(object); // () - оператор вызова функции
-// }
-//
-// const result = map(" msg ", (o) => {
-//     return o.length;
-// });
-//
-// console.log(result);
-//
 class Issue {
     constructor(name, description) {
         this.name = name;
         this.description = description;
     }
 }
-//
-// const bmw = new Issue('', 'BMW');
-// console.log(bmw);
-
-// const first = ['a', 'b', 'c'];
-// const second = ['d', 'e', 'f'];
-//
-// console.log(first);
-// console.log(first.join(':'));
-// first.__proto__ = {};
-// console.log(first.join(':'));
-
-// Host Environment
 
 const addForm = document.getElementById('add-form');
 const addFormInputName = document.getElementById('add-form-input-name');
@@ -49,7 +21,7 @@ addForm.addEventListener('submit', (e) => { //
     addFormInputDescription.value = ''; // вычищаем поле ввода
 
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://localhost:8081/api/issues');
+    xhr.open('POST', 'https://spring-boot-issue.herokuapp.com/api/issues');
     xhr.setRequestHeader('Content-Type', 'application/json');
 
     xhr.addEventListener('load', () => {
@@ -59,9 +31,6 @@ addForm.addEventListener('submit', (e) => { //
     xhr.send(JSON.stringify(datum));
 
 });
-
-
-
 
 
 const searchForm = document.getElementById('search');
@@ -75,8 +44,8 @@ searchForm.addEventListener('submit', (e) => { //
     }
 
     const xhr = new XMLHttpRequest();
-    const url  = 'http://localhost:8081/api/issues/search';
-    xhr.open('GET', url + '?' + searchInputName.name+'='+searchInputName.value);
+    const url = 'https://spring-boot-issue.herokuapp.com/api/issues/search';
+    xhr.open('GET', url + '?' + searchInputName.name + '=' + searchInputName.value);
     searchInputName.value = '';
 
     xhr.setRequestHeader('Content-Type', 'text/plain');
@@ -114,12 +83,11 @@ searchForm.addEventListener('submit', (e) => { //
 });
 
 
-
 const issueTableEl = document.getElementById('tbody');
 
 function load() {
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost:8081/api/issues');
+    xhr.open('GET', 'https://spring-boot-issue.herokuapp.com/api/issues');
     xhr.setRequestHeader('Accept', 'application/json');
 
     xhr.addEventListener('load', () => {
@@ -161,8 +129,3 @@ function load() {
 }
 
 load();
-
-// 2. - @RequestMapping, WebMvc.fn
-
-// PUT/POST
-// DELETE
