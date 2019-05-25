@@ -11,7 +11,7 @@
     <groupId>ru.itpark</groupId>
     <artifactId>issue</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot</name>
+    <name>spring-boot-issue</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
